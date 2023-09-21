@@ -21,3 +21,12 @@ auto it = find(v.begin(), v.end(), num);
 // 방법2) 정수값
 int n = *find(v.begin(), v.end(), num);
 ```
+
+3) vector에서 특정 값의 인덱스 구하기
+```C++
+#include <algorithm>
+int num = 3;
+
+auto it = find(v.begin(), v.end(), num);
+it - v.begin();   // 인덱스는 0부터 시작
+```
