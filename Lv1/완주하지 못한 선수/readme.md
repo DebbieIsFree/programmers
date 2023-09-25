@@ -11,6 +11,20 @@
   (왜냐면 participant 배열이 항상 completion 배열보다 1개 많기 때문이다.)
 - 그래서 participant의 마지막 원소가 답이 될 수 있다. 이것에 대한 처리를 해줘야 한다.
 ```
+```C++
+sort(participant.begin(), participant.end());
+sort(completion.begin(), completion.end());
+    
+int i = 0;
+for(; i<completion.size(); i++){
+  if(completion[i] != participant[i]){
+      break;
+  }
+}
+    
+return participant[i];
+```
+
 <br>
 
 2) 해시로 푸는 방법
